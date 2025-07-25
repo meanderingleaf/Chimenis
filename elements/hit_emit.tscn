@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7i5wsnlhrloq"]
+
+[ext_resource type="Texture2D" uid="uid://bvxhsyq4iyilc" path="res://addons/kenney_particle_pack/magic_03.png" id="1_8r6rx"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_e0x4x"]
+spread = 51.457
+initial_velocity_min = -30.0
+initial_velocity_max = 30.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ruehd"]
+transparency = 1
+blend_mode = 1
+albedo_texture = ExtResource("1_8r6rx")
+
+[sub_resource type="QuadMesh" id="QuadMesh_0icik"]
+material = SubResource("StandardMaterial3D_ruehd")
+
+[node name="Hit_Emit" type="GPUParticles3D"]
+process_material = SubResource("ParticleProcessMaterial_e0x4x")
+draw_pass_1 = SubResource("QuadMesh_0icik")

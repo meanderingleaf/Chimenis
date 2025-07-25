@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cy7w35ljmi5y2"]
+
+[ext_resource type="Shader" uid="uid://d3a8r8jfnv3mj" path="res://materials/shaders/flag_shader.gdshader" id="1_44kau"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_44kau")
+shader_parameter/speed = 1.0
+shader_parameter/frequency_y = 5.0
+shader_parameter/frequency_x = 2.5
+shader_parameter/frequency_z = 2.5
+shader_parameter/amplitude_y = 0.1
+shader_parameter/amplitude_x = 0.05
+shader_parameter/amplitude_z = 0.05
+shader_parameter/inclination = -0.04

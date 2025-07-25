@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdhkcheruemas"]
+
+[ext_resource type="Script" uid="uid://d38ay6lfxn8jp" path="res://scripts/hit_zone.gd" id="1_axyvf"]
+[ext_resource type="Texture2D" uid="uid://cepgyko1vw2dn" path="res://icon.svg" id="1_k524j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cxdg4"]
+size = Vector3(8.11511, 12.4571, 3.21729)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_axyvf"]
+size = Vector3(9.11, 14.55, 3.61)
+
+[node name="HitZone" type="Area3D" node_paths=PackedStringArray("show_shape", "shapeCast")]
+collision_mask = 2
+script = ExtResource("1_axyvf")
+show_shape = NodePath("Sprite3D")
+shapeCast = NodePath("ShapeCast3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0497422, 0.338903, 0.00756931)
+shape = SubResource("BoxShape3D_cxdg4")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(3.55029, 0, 0, 0, 6.21022, 0, 0, 0, 4.58449, 0, 0, 0)
+visible = false
+texture = ExtResource("1_k524j")
+
+[node name="ShapeCast3D" type="ShapeCast3D" parent="."]
+shape = SubResource("BoxShape3D_axyvf")
+collision_mask = 2
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

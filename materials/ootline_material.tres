@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bhrxpot1g5ipe"]
+
+[ext_resource type="Shader" uid="uid://2bo0d6fd3od3" path="res://materials/shaders/ootline.gdshader" id="1_hs37f"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_hs37f")
+shader_parameter/scale = 6.0
+shader_parameter/outline_spread = 5.5
+shader_parameter/_Color = Color(0.282353, 0.0627451, 0, 1)
+shader_parameter/_DepthNormalThreshold = 0.38
+shader_parameter/_DepthNormalThresholdScale = 3.0
+shader_parameter/_DepthThreshold = 1.5
+shader_parameter/_NormalThreshold = 2.0
