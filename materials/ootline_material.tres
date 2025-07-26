@@ -5,10 +5,10 @@
 [resource]
 render_priority = 0
 shader = ExtResource("1_hs37f")
-shader_parameter/scale = 6.0
+shader_parameter/scale = 4.915
 shader_parameter/outline_spread = 5.5
-shader_parameter/_Color = Color(0.282353, 0.0627451, 0, 1)
-shader_parameter/_DepthNormalThreshold = 0.38
+shader_parameter/_Color = Color(0, 0.160784, 0, 1)
+shader_parameter/_DepthNormalThreshold = -0.305
 shader_parameter/_DepthNormalThresholdScale = 3.0
 shader_parameter/_DepthThreshold = 1.5
 shader_parameter/_NormalThreshold = 2.0

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://c6j7xbcd3wvbg"]
+
+[ext_resource type="Texture2D" uid="uid://c0uoryi7t37fr" path="res://model/standardSurface1 Base Color.png" id="1_3a0u6"]
+[ext_resource type="Material" uid="uid://bhrxpot1g5ipe" path="res://materials/ootline_material.tres" id="2_1pdmm"]
+
+[resource]
+next_pass = ExtResource("2_1pdmm")
+albedo_texture = ExtResource("1_3a0u6")

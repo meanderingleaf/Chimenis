@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bdhkcheruemas"]
 
 [ext_resource type="Script" uid="uid://d38ay6lfxn8jp" path="res://scripts/hit_zone.gd" id="1_axyvf"]
-[ext_resource type="Texture2D" uid="uid://cepgyko1vw2dn" path="res://icon.svg" id="1_k524j"]
+[ext_resource type="Texture2D" uid="uid://cc3afjo4f6008" path="res://materials/textures/hit.png" id="2_axyvf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cxdg4"]
 size = Vector3(8.11511, 12.4571, 3.21729)
@@ -22,7 +22,8 @@ shape = SubResource("BoxShape3D_cxdg4")
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(3.55029, 0, 0, 0, 6.21022, 0, 0, 0, 4.58449, 0, 0, 0)
 visible = false
-texture = ExtResource("1_k524j")
+pixel_size = 0.0007
+texture = ExtResource("2_axyvf")
 
 [node name="ShapeCast3D" type="ShapeCast3D" parent="."]
 shape = SubResource("BoxShape3D_axyvf")
