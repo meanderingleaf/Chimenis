@@ -34,3 +34,5 @@ shape = SubResource("SphereShape3D_ktmpa")
 material_override = ExtResource("3_stcnd")
 process_material = SubResource("ParticleProcessMaterial_stcnd")
 draw_pass_1 = SubResource("BoxMesh_25kdu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cjipjbsuyyw0h"]
+[gd_scene load_steps=23 format=3 uid="uid://cjipjbsuyyw0h"]
 
 [ext_resource type="Script" uid="uid://dhrbveaninqei" path="res://scripts/game_controller.gd" id="1_luelg"]
 [ext_resource type="PackedScene" uid="uid://dfyl7ijnr6w7h" path="res://elements/ball.tscn" id="2_5mpes"]
@@ -9,8 +9,7 @@
 [ext_resource type="Script" uid="uid://cqr8w0ippai4x" path="res://scripts/camera_tools.gd" id="7_5mpes"]
 [ext_resource type="PackedScene" uid="uid://cypff8yp3hpre" path="res://elements/return_zone.tscn" id="7_ruehd"]
 [ext_resource type="PackedScene" uid="uid://c7ur0dfexng4q" path="res://elements/end_zone.tscn" id="8_0icik"]
-[ext_resource type="Script" uid="uid://n0l03nwnuuuu" path="res://scripts/opponent.gd" id="10_882y5"]
-[ext_resource type="PackedScene" uid="uid://dr18hs068jwsw" path="res://model/yenscene.tscn" id="11_ruehd"]
+[ext_resource type="PackedScene" uid="uid://o8f86yf0ien2" path="res://elements/opponent.tscn" id="10_e0x4x"]
 [ext_resource type="PackedScene" uid="uid://c5f37vfpj8jxw" path="res://model/street.glb" id="11_xq5ve"]
 [ext_resource type="Material" uid="uid://cy7w35ljmi5y2" path="res://materials/flag_material.tres" id="12_2ddgu"]
 [ext_resource type="Texture2D" uid="uid://bug7lvxy3guu" path="res://materials/textures/service-pnp-jpd-01800-01822v.jpg" id="12_e0x4x"]
@@ -38,10 +37,6 @@ glow_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ktmpa"]
 size = Vector3(100, 100, 1)
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5mpes"]
-radius = 1.34627
-height = 8.98785
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ruehd"]
 albedo_texture = ExtResource("12_e0x4x")
@@ -106,6 +101,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.881415, 7.00618, 18.06)
 script = ExtResource("7_5mpes")
 
 [node name="ReturnZone" parent="." instance=ExtResource("7_ruehd")]
+process_mode = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.9419, -17.6627)
 
 [node name="Hit_points" type="Node" parent="."]
@@ -139,17 +135,9 @@ offset_right = 836.0
 offset_bottom = 100.0
 value = 50.0
 
-[node name="Opponent" type="CharacterBody3D" parent="." node_paths=PackedStringArray("ball")]
+[node name="Opponent" parent="." node_paths=PackedStringArray("ball") instance=ExtResource("10_e0x4x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0565394, -13.2336)
-script = ExtResource("10_882y5")
 ball = NodePath("../Ball")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Opponent"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.168974, 4.63964, 0)
-shape = SubResource("CapsuleShape3D_5mpes")
-
-[node name="yenyen3" parent="Opponent" instance=ExtResource("11_ruehd")]
-transform = Transform3D(0.0532661, 0, 0, 0, 0.0532661, 0, 0, 0, 0.0532661, 0, 0, 0)
 
 [node name="street" parent="." instance=ExtResource("11_xq5ve")]
 transform = Transform3D(-41.5338, 0, -5.78102, 0, 41.9342, 0, 5.78102, 0, -41.5338, 29.5133, 18.5395, -29.181)
