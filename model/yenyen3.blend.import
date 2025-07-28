@@ -34,11 +34,11 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "animations": {
-"rigAction": {
+"Walk_001": {
 "save_to_file/enabled": false,
 "save_to_file/keep_custom_tracks": "",
 "save_to_file/path": "",
-"settings/loop_mode": 2,
+"settings/loop_mode": 1,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
 "slice_1/name": "",
@@ -1836,8 +1836,8 @@ _subresources={
 },
 "materials": {
 "yen_albedo": {
-"use_external/enabled": false,
-"use_external/path": "uid://bhrxpot1g5ipe"
+"use_external/enabled": true,
+"use_external/path": "uid://c6j7xbcd3wvbg"
 }
 }
 }
@@ -1847,11 +1847,11 @@ blender/nodes/punctual_lights=true
 blender/nodes/cameras=true
 blender/nodes/custom_properties=true
 blender/nodes/modifiers=1
-blender/meshes/colors=false
+blender/meshes/colors=true
 blender/meshes/uvs=true
 blender/meshes/normals=true
 blender/meshes/export_geometry_nodes_instances=false
-blender/meshes/tangents=true
+blender/meshes/tangents=false
 blender/meshes/skins=2
 blender/meshes/export_bones_deforming_mesh_only=false
 blender/materials/unpack_enabled=true

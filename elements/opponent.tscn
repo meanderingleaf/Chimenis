@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://o8f86yf0ien2"]
 
 [ext_resource type="Script" uid="uid://n0l03nwnuuuu" path="res://scripts/opponent.gd" id="1_w110x"]
-[ext_resource type="PackedScene" path="res://model/yenscene.tscn" id="2_431bk"]
+[ext_resource type="PackedScene" uid="uid://dyxkmmm3fqi6y" path="res://model/yenyen_3.tscn" id="2_431bk"]
 [ext_resource type="PackedScene" uid="uid://cypff8yp3hpre" path="res://elements/return_zone.tscn" id="3_431bk"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5mpes"]
@@ -16,7 +16,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.168974, 4.63964, 0)
 shape = SubResource("CapsuleShape3D_5mpes")
 
 [node name="yenyen3" parent="." instance=ExtResource("2_431bk")]
-transform = Transform3D(0.0532661, 0, 0, 0, 0.0532661, 0, 0, 0, 0.0532661, 0, 0, 0)
+transform = Transform3D(-0.0532661, 0, 4.65667e-09, 0, 0.0532661, 0, -4.65667e-09, 0, -0.0532661, 0, 0, 0)
 
 [node name="ReturnZone" parent="." instance=ExtResource("3_431bk")]
 transform = Transform3D(0.0618735, 0, 0, 0, 0.377117, 0, 0, 0, 0.958617, -0.1579, 0, -1.40565)

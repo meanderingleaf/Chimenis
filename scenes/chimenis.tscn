@@ -97,7 +97,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.68222, 7.39167, 10.8321)
 action = "left"
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.881415, 7.00618, 18.06)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.881415, 7.00618, 1.54588)
 script = ExtResource("7_5mpes")
 
 [node name="ReturnZone" parent="." instance=ExtResource("7_ruehd")]
