@@ -97,7 +97,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.68222, 7.39167, 10.8321)
 action = "left"
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.881415, 7.00618, 1.54588)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.881415, 7.00618, 18.2256)
 script = ExtResource("7_5mpes")
 
 [node name="ReturnZone" parent="." instance=ExtResource("7_ruehd")]
@@ -146,12 +146,17 @@ transform = Transform3D(-41.5338, 0, -5.78102, 0, 41.9342, 0, 5.78102, 0, -41.53
 transform = Transform3D(41.9241, 0, 0.920641, 0, 41.9342, 0, -0.920641, 0, 41.9241, -20.2009, 18.5395, -29.181)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(108.794, 0, 0, 0, -1.17544e-05, -66.2892, 0, 268.91, -2.8976e-06, 5.71852, 37.183, -117.962)
+transform = Transform3D(108.794, 0, 0, 0, -1.17544e-05, -66.2892, 0, 268.91, -2.8976e-06, 5.71852, 57.3472, -117.962)
 material_override = SubResource("StandardMaterial3D_ruehd")
 mesh = SubResource("PlaneMesh_xq5ve")
 
 [node name="Florg" type="MeshInstance3D" parent="."]
-transform = Transform3D(4.36824, -1.96845, -0.236461, 0, 0.359851, -3.07564, 3.72148, 2.31056, 0.277556, 17.2564, 10.5429, 2.49778)
+transform = Transform3D(4.36824, -1.96845, -0.236461, 0, 0.359851, -3.07564, 3.72148, 2.31056, 0.277556, 17.2564, 10.5429, 3.99358)
+material_override = ExtResource("12_2ddgu")
+mesh = SubResource("PlaneMesh_2ddgu")
+
+[node name="Florg3" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.26464, -2.03102, -0.243977, 0, 0.359851, -3.07564, 3.83977, 2.25576, 0.270973, -7.77666, 10.5429, 3.99358)
 material_override = ExtResource("12_2ddgu")
 mesh = SubResource("PlaneMesh_2ddgu")
 

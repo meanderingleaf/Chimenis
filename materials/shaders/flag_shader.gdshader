@@ -13,6 +13,8 @@ uniform sampler2D tex;
 
 void fragment(){
 	vec4 albedo_tex = texture(tex, UV);
+	
+	ALPHA = albedo_tex.a;
 	ALBEDO = vec3(1.0) * albedo_tex.rgb;
 }
 
