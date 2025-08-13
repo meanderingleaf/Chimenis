@@ -16,7 +16,6 @@ func randomOffset():
 
 func _process(delta: float) -> void:
 	if(cur_shake > 0):
-		print(cur_shake)
 		cur_shake = lerpf(cur_shake, 0, shake_fade + delta)
 		
 		self.transform.origin = initial_transform.origin + randomOffset()

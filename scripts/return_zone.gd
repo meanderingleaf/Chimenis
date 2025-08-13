@@ -17,4 +17,7 @@ func _on_body_entered(body: Node3D) -> void:
 		return_vec.y -= .2
 		body.apply_impulse( return_vec * 30)
 		
+		SfxController.play_sound_random_pitch("Ball_Sound")
+
+		
 		body.player_hit = false

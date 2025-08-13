@@ -22,6 +22,8 @@ func hit_ball(ball):
 	ball.apply_impulse( (-self.global_transform.basis.z + offset)  * 34)
 	hit_complete.emit()
 	ball.player_hit = true
+	SfxController.play_sound_random_pitch("Ball_Sound")
+	
 	
 func _on_body_entered(body: Node3D) -> void:
 	show_shape.visible = true

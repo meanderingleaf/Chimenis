@@ -1,7 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://cjipjbsuyyw0h"]
+[gd_scene load_steps=25 format=3 uid="uid://cjipjbsuyyw0h"]
 
 [ext_resource type="Script" uid="uid://dhrbveaninqei" path="res://scripts/game_controller.gd" id="1_luelg"]
+[ext_resource type="AudioStream" uid="uid://cmibca6gqqmi5" path="res://sounds/ball_smash.wav" id="2_0icik"]
 [ext_resource type="PackedScene" uid="uid://dfyl7ijnr6w7h" path="res://elements/ball.tscn" id="2_5mpes"]
+[ext_resource type="AudioStream" uid="uid://d2mx7ree6nouq" path="res://sounds/onrepeat.mp3" id="2_ruehd"]
 [ext_resource type="Material" uid="uid://bcblauo7wj6ga" path="res://materials/basic_material.tres" id="3_882y5"]
 [ext_resource type="PhysicsMaterial" uid="uid://bcgu0rype3uqf" path="res://materials/ball_phys.tres" id="4_xq5ve"]
 [ext_resource type="Material" uid="uid://bx8t1vq531cr7" path="res://materials/ground_material.tres" id="5_2ddgu"]
@@ -49,6 +51,15 @@ albedo_texture = ExtResource("12_e0x4x")
 script = ExtResource("1_luelg")
 ball = NodePath("Ball")
 win_bar = NodePath("UI/HScrollBar")
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="Ball_Sound" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("2_0icik")
+
+[node name="BGM" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("2_ruehd")
+autoplay = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_bkii7")

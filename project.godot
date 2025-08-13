@@ -15,6 +15,10 @@ run/main_scene="uid://cjipjbsuyyw0h"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SfxController="*res://scripts/sfx_controller.gd"
+
 [global_group]
 
 hit_point=""
